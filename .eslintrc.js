@@ -45,5 +45,6 @@ module.exports = {
 		'security/detect-object-injection': 'off',
 		'simple-import-sort/imports': 'off',
 		'no-shadow': 'off',
+		'import/no-extraneous-dependencies': 'off',
 	},
 };

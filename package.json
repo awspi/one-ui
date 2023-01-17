@@ -1,6 +1,6 @@
 {
 	"name": "one-ui",
-	"version": "0.0.18",
+	"version": "0.0.1",
 	"description": "A component library that can achieve magic effects",
 	"keywords": [
 		"ui",
@@ -13,13 +13,13 @@
 		"react",
 		"typescript"
 	],
-	"homepage": "",
+	"homepage": "https://github.com/awspi/one-ui",
 	"bugs": {
-		"url": ""
+		"url": "https://github.com/awspi/one-ui"
 	},
 	"repository": {
 		"type": "git",
-		"url": ""
+		"url": "https://github.com/awspi/one-ui"
 	},
 	"license": "MIT",
 	"module": "dist/index.esm.js",
@@ -31,6 +31,7 @@
 	],
 	"scripts": {
 		"build": "father build",
+		"commit": "git-cz",
 		"deploy": "npm run docs:build && npm run docs:deploy",
 		"dev": "TAILWIND_MODE=watch dumi dev",
 		"docs:build": "dumi build",
@@ -54,13 +55,13 @@
 			"eslint --fix"
 		]
 	},
+	"config": {
+		"commitizen": {
+			"path": "node_modules/cz-customizable"
+		}
+	},
 	"dependencies": {
-		"@emotion/react": "^11.10.0",
-		"@emotion/styled": "^11.10.0",
-		"@mui/material": "^5.10.1",
-		"@mui/styles": "^5.9.3",
-		"ahooks": "^3.7.0",
-		"animate.css": "^4.1.1",
+		"classnames": "^2.3.2",
 		"tailwindcss": "npm:@tailwindcss/postcss7-compat"
 	},
 	"devDependencies": {
@@ -75,6 +76,9 @@
 		"@umijs/fabric": "^3.0.0",
 		"@umijs/runtime": "^3.5.32",
 		"@umijs/test": "^4.0.13",
+		"commitizen": "^4.2.6",
+		"cz-conventional-changelog": "^3.3.0",
+		"cz-customizable": "^7.0.0",
 		"dumi": "^1.1.47",
 		"eslint": "^8.22.0",
 		"eslint-plugin-github": "^4.3.7",

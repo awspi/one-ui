@@ -1,17 +1,18 @@
 {
-  "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "jsx": "react",
-    "esModuleInterop": true,
-    "types": ["jest"],
-    "strict": true,
-    "skipLibCheck": true,
-    "declaration": true,
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "esnext",
+		"moduleResolution": "node",
+		"jsx": "react",
+		"esModuleInterop": true,
+		"types": ["jest"],
+		"strict": true,
+		"skipLibCheck": true,
+		"declaration": true,
 		"paths": {
 			"@/*": ["./src/*"]
 		}
-  },
-	"exclude": ["node_modules", "*.config.js","*.md"],
+	},
+	"baseUrl": "./",
+	"exclude": ["node_modules", "*.config.js", "*.md"]
 }

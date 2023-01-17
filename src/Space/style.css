@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.space {
+	@apply flex items-center;
+}
+
+.space-sm {
+	@apply space-x-2;
+}
+.space-md {
+	@apply space-x-4;
+}
+.space-lg {
+	@apply space-x-6;
+}

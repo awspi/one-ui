@@ -1,5 +1,4 @@
 import './global.css';
 
-export { default as Foo } from './Foo';
-export * from './Swiper';
-export { default as Weather } from './Weather';
+export { default as Button } from './Button';
+export { default as Space } from './Space';

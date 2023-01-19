@@ -12,7 +12,7 @@ interface IButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
 	/** @description 按钮颜色 @default default */
 	color?: 'default' | 'alternate' | 'dark' | 'light' | 'green' | 'red' | 'yellow' | 'purple';
 	/** @description 按钮大小 @default md */
-	size: 'sm' | 'md' | 'lg';
+	size?: 'sm' | 'md' | 'lg';
 	/** 点击事件 */
 	onClick?: React.MouseEventHandler<HTMLButtonElement>;
 	/** 失去焦点事件 */

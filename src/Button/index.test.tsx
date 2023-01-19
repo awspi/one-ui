@@ -1,13 +1,11 @@
-// import '@testing-library/jest-dom';
-// import { render, screen } from '@testing-library/react';
-// import React from 'react';
-// import Foo from './index';
+import { render, screen } from '@testing-library/react';
+import React from 'react';
+import Button from './index';
 
-// describe('<Foo />', () => {
-// 	it('render Foo with dumi', () => {
-// 		const msg = 'dumi';
-
-// 		render(<Foo title={msg} />);
-// 		expect(screen.queryByText(msg)).toBeInTheDocument();
-// 	});
-// });
+describe('Button', () => {
+	test('renders Button', () => {
+		render(<Button>click me</Button>);
+		const linkElement = screen.getByText(/click me/i);
+		expect(linkElement).toBeInTheDocument();
+	});
+});

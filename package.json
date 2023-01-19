@@ -30,6 +30,7 @@
 		"lib"
 	],
 	"scripts": {
+		"add:c":	"node scripts/add.js",
 		"build": "father build",
 		"commit": "git-cz",
 		"deploy": "npm run docs:build && npm run docs:deploy",

@@ -1,0 +1,108 @@
+{
+	"name": "one-ui",
+	"version": "0.0.1",
+	"description": "A component library that can achieve magic effects",
+	"keywords": [
+		"ui",
+		"one-ui",
+		"frontend",
+		"component",
+		"components",
+		"react component",
+		"react components",
+		"react",
+		"typescript"
+	],
+	"homepage": "https://github.com/awspi/one-ui",
+	"bugs": {
+		"url": "https://github.com/awspi/one-ui"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/awspi/one-ui"
+	},
+	"license": "MIT",
+	"module": "dist/index.esm.js",
+	"typings": "dist/index.d.ts",
+	"files": [
+		"dist",
+		"es",
+		"lib"
+	],
+	"scripts": {
+		"add:c": "node scripts/add.js",
+		"build": "father build",
+		"commit": "git-cz",
+		"deploy": "npm run docs:build && npm run docs:deploy",
+		"dev": "TAILWIND_MODE=watch dumi dev",
+		"docs:build": "dumi build",
+		"docs:deploy": "gh-pages -d docs",
+		"prepublishOnly": "npm run build",
+		"prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
+		"release": "npm publish --access public",
+		"test": "umi-test",
+		"test:coverage": "umi-test --coverage"
+	},
+	"lint-staged": {
+		"*.{css,less,md,json}": [
+			"prettier --write"
+		],
+		"*.ts?(x)": [
+			"prettier --parser=typescript --write",
+			"eslint --fix"
+		],
+		"*.{js,jsx}": [
+			"prettier --write",
+			"eslint --fix"
+		]
+	},
+	"config": {
+		"commitizen": {
+			"path": "node_modules/cz-customizable"
+		}
+	},
+	"dependencies": {
+		"classnames": "^2.3.2",
+		"rc-field-form": "^1.27.3",
+		"tailwindcss": "npm:@tailwindcss/postcss7-compat"
+	},
+	"devDependencies": {
+		"@fullstacksjs/eslint-config": "^8.5.1",
+		"@rollup/plugin-commonjs": "^17.0.0",
+		"@rollup/plugin-node-resolve": "^13.3.0",
+		"@testing-library/jest-dom": "^5.15.1",
+		"@testing-library/react": "^13.0.0",
+		"@types/jest": "^27.0.3",
+		"@typescript-eslint/eslint-plugin": "^5.34.0",
+		"@typescript-eslint/parser": "^5.33.1",
+		"@umijs/fabric": "^3.0.0",
+		"@umijs/runtime": "^3.5.32",
+		"@umijs/test": "^4.0.13",
+		"commitizen": "^4.2.6",
+		"cz-conventional-changelog": "^3.3.0",
+		"cz-customizable": "^7.0.0",
+		"dumi": "^1.1.47",
+		"eslint": "^8.22.0",
+		"eslint-plugin-github": "^4.3.7",
+		"eslint-plugin-regexp": "^1.9.0",
+		"father": "2.30.21",
+		"gh-pages": "^3.0.0",
+		"lint-staged": "^10.0.7",
+		"postcss-import": "11",
+		"prettier": "^2.2.1",
+		"rollup-plugin-peer-deps-external": "^2.2.4",
+		"rollup-plugin-postcss": "^4.0.2",
+		"yorkie": "^2.0.0"
+	},
+	"peerDependencies": {
+		"react": "^16.8.0 || ^17.x || ^18.x",
+		"react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
+	},
+	"engines": {
+		"node": ">=16",
+		"npm": ">=8"
+	},
+	"gitHooks": {
+		"pre-commit": "lint-staged"
+	}
+}

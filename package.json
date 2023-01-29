@@ -30,11 +30,11 @@
 		"lib"
 	],
 	"scripts": {
-		"add:c":	"node scripts/add.js",
+		"add:c": "node scripts/add.js",
 		"build": "father build",
 		"commit": "git-cz",
 		"deploy": "npm run docs:build && npm run docs:deploy",
-		"dev": "TAILWIND_MODE=watch dumi dev",
+		"dev": "export NODE_OPTIONS=--openssl-legacy-provider && TAILWIND_MODE=watch dumi dev",
 		"docs:build": "dumi build",
 		"docs:deploy": "gh-pages -d docs",
 		"prepublishOnly": "npm run build",
